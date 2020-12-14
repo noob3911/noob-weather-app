@@ -24,7 +24,7 @@ app.use(express.static(publicPath));
 
 hbs.registerPartials(partialPath);
 
-app.get('',(req,res)=>{
+app.get('/',(req,res)=>{
 	res.render('index.hbs',{
 		title:"Weather App"
 		
@@ -74,9 +74,9 @@ app.get('/weather',(req,res)=>{
 // });
 
 
-// app.get('*',(req,res)=>{
-// 	res.end('404 Error')
-// })
+app.get('*',(req,res)=>{
+	res.end('404 Error')
+})
 
 app.listen(port,()=>{
 	console.log("Server is up..."+port)

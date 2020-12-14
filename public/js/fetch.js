@@ -12,7 +12,7 @@ search.addEventListener('submit',(e) => {
 	console.log(location)
 	messageOne.textContent ='Loading...';
 	messageTwo.textContent='';
-	const url = `http://localhost:3000/weather?address=${location}`;
+	const url = `/weather?address=${location}`;
 	fetch(url).then((res)=>{
 		res.json().then((data)=>{
 			if(data.error){
